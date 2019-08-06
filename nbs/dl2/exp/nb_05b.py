@@ -106,7 +106,7 @@ class Runner():
             self.learn = None
 
     def __call__(self, cb_name):
-        res = False
+        res = True
         for cb in sorted(self.cbs, key=lambda x: x._order): res = cb(cb_name) and res
         return res
 
